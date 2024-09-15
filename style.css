@@ -22,7 +22,7 @@ body{
     color: white;
 }
 
-header{
+/* header{
     margin-top: 20px;
     position: fixed;
     top: 0;
@@ -35,6 +35,27 @@ header{
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+} */
+
+header{
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-bottom: 3px solid #000;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: background-color 0.3s ease; 
+}
+
+header.scrolled {
+    background-color: rgba(0, 0, 0, 1); /* Navbar jadi lebih solid saat discroll */
 }
 
 .logo{
@@ -226,20 +247,17 @@ span{
 }
 
 @keyframes words{
-    0%, 20%{
-        content: "Web Developer";
+    0%, 25%{
+        content: "Student";
     }
-    21%, 40%{
-        content: "Developer";
+    26%, 50%{
+        content: "Research Assistant";
     }
-    41%, 60%{
+    51%, 75%{
         content: "Data Analyst";
     }
-    61%, 80%{
-        content: "Business Consultant";
-    }
-    81%, 100%{
-        content: "Researcher Assistant";
+    76%, 100%{
+        content: "Web Developer";
     }
 }
 
@@ -269,3 +287,71 @@ span{
     }
 }
 
+.projects .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.projects h2 {
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.projects p {
+    color: #bbb;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+/* Styling for the project grid */
+.project-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-item {
+    width: 100%;
+    max-width: 1200px; /* Set a max-width for larger screens */
+    background-color: #f4f4f4;
+    color: #CF9FFF;
+    padding: 20px;
+    margin: 10px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.project-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.project-item p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.project-item .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.project-item .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: #bbb;
+}
