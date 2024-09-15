@@ -301,9 +301,15 @@ span{
 }
 
 .projects p {
-    color: #bbb;
+    color: black;
+    text-align: justify;
     font-size: 18px;
     margin-bottom: 40px;
+}
+
+.projects .highlight-text {
+    color: #f4f4f4;
+    text-align: center;
 }
 
 /* Styling for the project grid */
@@ -326,8 +332,13 @@ span{
 }
 
 .project-item h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+    color: #CF9FFF;
+    text-shadow: 1px 1px 2px #000,  /* Shadow ke kanan bawah */
+                 -1px 1px 2px #000, /* Shadow ke kiri bawah */
+                 1px -1px 2px #000, /* Shadow ke kanan atas */
+                 -1px -1px 2px #000; /* Shadow ke kiri atas */
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .project-item p {
@@ -354,6 +365,27 @@ span{
     background-color: #CF9FFF;
     color: black;
     box-shadow: 0 0 25px #CF9FFF;
+}
+
+.project-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Jarak antar gambar */
+    justify-content: center; /* Rata tengah */
+    margin-top: 20px; /* Jarak atas dari teks */
+    margin-bottom: 20px;
+}
+
+.project-images img {
+    width: calc(50% - 10px); /* Ukuran gambar (20% dari container minus jarak antar gambar) */
+    height: auto; /* Menjaga rasio aspek gambar */
+    border-radius: 8px; /* Sudut gambar melengkung */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Bayangan gambar */
+    transition: transform 0.3s ease; /* Efek transisi */
+}
+
+.project-images img:hover {
+    transform: scale(1.05); /* Zoom gambar saat hover */
 }
 
 /* Footer Styling */
