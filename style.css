@@ -337,15 +337,23 @@ span{
 
 .project-item .btn {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border-radius: 4px;
-    text-decoration: none;
+    padding: 1rem 2.8rem;
+    background-color: black;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: #CF9FFF;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid #CF9FFF;
+    transition: 0.3s ease;
+    cursor: pointer;
 }
 
 .project-item .btn:hover {
-    background-color: #0056b3;
+    transform: scale(1.03);
+    background-color: #CF9FFF;
+    color: black;
+    box-shadow: 0 0 25px #CF9FFF;
 }
 
 /* Footer Styling */
